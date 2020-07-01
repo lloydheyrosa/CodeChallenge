@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvwDatePreviouslyVisited"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:layout_marginBottom="8dp"
+            android:padding="@dimen/default_margin"
+            android:background="@color/colorPrimary"
+            android:textColor="@color/white"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            tools:text="@tools:sample/date/ddmmyy"/>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshItems"
+            android:layout_below="@id/tvwDatePreviouslyVisited"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvwItunesItems"
+                android:name="com.myapp.codingchallenge.ItemListFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="LinearLayoutManager"
+                tools:listitem="@layout/item_list_content" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <RelativeLayout
+            android:id="@+id/relNoResults"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imgNoResults"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginTop="200dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/ic_no_result"/>
+
+            <TextView
+                android:id="@+id/tvwNoResultLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgNoResults"
+                android:layout_margin="@dimen/default_margin"
+                style="@style/TextAppearance.AppCompat.Subhead"
+                android:textColor="@color/secondary_text"
+                android:layout_centerHorizontal="true"
+                android:text="@string/no_results_found"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+</layout>
+

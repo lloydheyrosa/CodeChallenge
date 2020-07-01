@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="@dimen/default_margin"
+    android:layout_marginStart="@dimen/default_margin"
+    android:layout_marginBottom="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imgItem"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="16dp"
+            android:scaleType="centerCrop"
+            style="@style/circleImageView"
+            tools:src="@tools:sample/backgrounds/scenic"/>
+
+        <TextView
+            android:id="@+id/tvwTrackName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imgItem"
+            android:layout_marginEnd="@dimen/default_margin"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_marginTop="@dimen/default_margin"
+            tools:text="@tools:sample/lorem"/>
+
+        <TextView
+            android:id="@+id/tvwGenre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/imgItem"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:layout_below="@id/tvwTrackName"
+            tools:text="@tools:sample/lorem"/>
+
+        <TextView
+            android:id="@+id/tvwPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/default_margin"
+            android:textStyle="bold"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:textColor="@color/colorPrimary"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@id/imgItem"
+            tools:text="1,000"/>
+
+        <TextView
+            android:id="@+id/tvwCurrency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="USD"
+            android:layout_marginTop="2dp"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginEnd="4dp"
+            android:layout_alignTop="@id/tvwPrice"
+            android:layout_toStartOf="@id/tvwPrice" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="media_values">
+        <item>all</item>
+        <item>movie</item>
+        <item>podcast</item>
+        <item>music</item>
+        <item>musicVideo</item>
+        <item>audiobook</item>
+        <item>shortFilm</item>
+        <item>tvShow</item>
+        <item>software</item>
+        <item>ebook</item>
+    </string-array>
+
+    <string-array name="media_labels">
+        <item>All</item>
+        <item>Movie</item>
+        <item>Podcast</item>
+        <item>Music</item>
+        <item>Music Video</item>
+        <item>Audiobook</item>
+        <item>Short Film</item>
+        <item>TV Show</item>
+        <item>Software</item>
+        <item>E-book</item>
+    </string-array>
+</resources>
