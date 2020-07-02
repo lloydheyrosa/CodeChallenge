@@ -24,10 +24,8 @@ class ItunesItemViewModel(
     }
 
     /** LiveData for handling data updates and displaying it to the user. */
-    private val mutableItemsLiveData = MutableLiveData<List<ItunesItem>>()
     val itemsLiveData: LiveData<List<ItunesItem>>
         get() = repository.getSavedItems()
-
 
     /**
      * this is the main function in getting items from the api and saving it in the local database,
@@ -40,7 +38,6 @@ class ItunesItemViewModel(
 
             val response = repository.getAllItems(searchParams)
             if(response?.resultCount ?: 0 > 0) {
-                mutableItemsLiveData.value = response?.results
                 statusListener?.onSuccess()
             }
             else statusListener?.onNoResultsFound("No results found. Please try again.")
